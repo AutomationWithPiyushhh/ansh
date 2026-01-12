@@ -17,6 +17,7 @@
             color: #ffffff; 
             font-family: 'Inter', sans-serif; 
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* Video-style Accent Colors */
@@ -35,6 +36,12 @@
             animation: blink 1s infinite;
         }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Project Card Hover Effects */
+        .project-card:hover .project-preview {
+            transform: scale(1.03);
+            border-color: #facc15;
+        }
     </style>
 </head>
 <body>
@@ -117,10 +124,74 @@
         </div>
     </section>
 
-    <footer class="py-20 border-t border-gray-800 text-center">
-        <p class="text-gray-600 mb-4" data-aos="fade-in">Ready to automate your future?</p>
-        <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Let's build something robust.</h2>
-        <a href="mailto:piyush@example.com" class="text-amber-400 text-xl font-bold border-b-2 border-amber-400 pb-1">Get In Touch</a>
+    <section id="works" class="max-w-7xl mx-auto px-8 py-20 border-t border-gray-800">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div data-aos="fade-right">
+                <p class="text-gray-500 uppercase text-xs mb-4 tracking-widest">— Selected Portfolio</p>
+                <h3 class="text-5xl font-bold leading-tight">Automation Frameworks<br>& Case Studies.</h3>
+            </div>
+            <div data-aos="fade-left">
+                <a href="#" class="px-8 py-4 bg-white text-black font-bold hover:bg-amber-400 transition-colors duration-300">View All GitHub <i class="fab fa-github ml-2"></i></a>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="project-card group cursor-pointer" data-aos="fade-up">
+                <div class="project-preview bg-card rounded-xl p-8 mb-6 border border-gray-800 group-hover:border-amber-400 transition-all duration-500">
+                    <div class="h-64 bg-[#1a1b23] rounded-lg p-6 font-mono text-sm text-green-400/80 overflow-hidden relative">
+                        <div class="absolute top-4 right-4 text-gray-700 text-xs">Framework.java</div>
+                        <p class="mb-2">public class EcomHybridFramework {</p>
+                        <p class="ml-4 text-amber-400">@Test</p>
+                        <p class="ml-4">public void verifyPurchase() {</p>
+                        <p class="ml-8">Pages.Login().with(user, pass);</p>
+                        <p class="ml-8">Pages.Cart().addItem("Automation Book");</p>
+                        <p class="ml-8 text-gray-500">// Integrated with Apache POI & Extent</p>
+                        <p class="ml-4">}</p>
+                        <p>}</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h4 class="text-2xl font-bold group-hover:text-amber-400 transition-colors">Enterprise Hybrid Engine</h4>
+                        <p class="text-gray-500 mt-2">Java • Selenium • POM • Apache POI • TestNG</p>
+                    </div>
+                    <i class="fas fa-external-link-alt text-gray-600 group-hover:text-amber-400 transition-colors"></i>
+                </div>
+            </div>
+
+            <div class="project-card group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-preview bg-card rounded-xl p-8 mb-6 border border-gray-800 group-hover:border-amber-400 transition-all duration-500">
+                    <div class="h-64 bg-[#1a1b23] rounded-lg p-6 flex flex-col justify-center items-center text-center">
+                        <i class="fas fa-network-wired text-6xl text-gray-800 mb-6 group-hover:text-amber-400/50 transition-colors"></i>
+                        <div class="flex gap-3 mb-4">
+                            <span class="bg-green-500/10 text-green-400 text-[10px] px-2 py-1 rounded">GET</span>
+                            <span class="bg-blue-500/10 text-blue-400 text-[10px] px-2 py-1 rounded">POST</span>
+                            <span class="bg-red-500/10 text-red-400 text-[10px] px-2 py-1 rounded">DELETE</span>
+                        </div>
+                        <p class="text-gray-500 text-sm italic">Scalable RestAssured Engine with Jackson Serialization</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h4 class="text-2xl font-bold group-hover:text-amber-400 transition-colors">REST API Testing Suite</h4>
+                        <p class="text-gray-500 mt-2">RestAssured • Maven • Jackson • Hamcrest</p>
+                    </div>
+                    <i class="fas fa-external-link-alt text-gray-600 group-hover:text-amber-400 transition-colors"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-24 border-t border-gray-800 text-center">
+        <p class="text-gray-600 mb-4 tracking-widest uppercase text-xs" data-aos="fade-in">Connect With Me</p>
+        <h2 class="text-4xl md:text-6xl font-bold mb-12" data-aos="fade-up">Let's build something robust.</h2>
+        <a href="mailto:piyush@example.com" class="text-amber-400 text-2xl font-bold border-b-4 border-amber-400 pb-2 hover:text-white hover:border-white transition-colors">hi@piyush.art</a>
+        
+        <div class="flex justify-center gap-8 mt-16">
+             <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+             <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+             <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
